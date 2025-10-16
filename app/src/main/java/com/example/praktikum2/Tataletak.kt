@@ -1,9 +1,8 @@
-package com.example.mylayout
+package com.example.praktikum2
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 
 @Composable
 fun TataLetakModern(modifier: Modifier = Modifier) {
-    // Konten UI akan ditambahkan di sini nanti
 }
