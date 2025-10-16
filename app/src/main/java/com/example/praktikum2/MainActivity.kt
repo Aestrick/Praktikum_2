@@ -18,7 +18,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    // Panggil fungsi kita di sini
+                    // Memanggil fungsi UI utama kita
                     TataletakBoxColumnRow()
                 }
             }

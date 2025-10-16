@@ -14,11 +14,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.painterResource // <-- IMPORT BARU YANG PENTING
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview // <-- IMPORT BARU
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.praktikum2.ui.theme.Praktikum2Theme // <-- IMPORT BARU
 
 @Composable
 fun TataletakBoxColumnRow(modifier: Modifier = Modifier) {
@@ -59,15 +61,11 @@ fun TataletakBoxColumnRow(modifier: Modifier = Modifier) {
                 .background(color = Color.Cyan),
             contentAlignment = Alignment.Center
         ) {
-            // --- PERUBAHAN DI SINI ---
-            // Kita tidak lagi menggunakan ikon, tapi gambar dari resource
-            val gambar = painterResource(id = R.drawable.img) // Memuat img.png
+            val gambar = painterResource(id = R.drawable.img)
             Image(
-                painter = gambar, // Menggunakan painter
+                painter = gambar,
                 contentDescription = null
             )
-            // --- AKHIR PERUBAHAN ---
-
             Text(
                 text = "My Music",
                 fontSize = 50.sp,
@@ -76,5 +74,14 @@ fun TataletakBoxColumnRow(modifier: Modifier = Modifier) {
                 fontFamily = FontFamily.Cursive
             )
         }
+    }
+}
+
+// --- FUNGSI PREVIEW BARU DI SINI ---
+@Preview(showBackground = true, showSystemUi = true)
+@Composable
+fun TataletakBoxColumnRowPreview() {
+    Praktikum2Theme {
+        TataletakBoxColumnRow()
     }
 }
