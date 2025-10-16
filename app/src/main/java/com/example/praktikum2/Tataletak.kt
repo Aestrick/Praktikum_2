@@ -9,13 +9,12 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.MusicNote
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource // <-- IMPORT BARU YANG PENTING
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -60,11 +59,15 @@ fun TataletakBoxColumnRow(modifier: Modifier = Modifier) {
                 .background(color = Color.Cyan),
             contentAlignment = Alignment.Center
         ) {
-            val gambar = Icons.Default.MusicNote // Placeholder untuk notasinaton
+            // --- PERUBAHAN DI SINI ---
+            // Kita tidak lagi menggunakan ikon, tapi gambar dari resource
+            val gambar = painterResource(id = R.drawable.img) // Memuat img.png
             Image(
-                imageVector = gambar,
+                painter = gambar, // Menggunakan painter
                 contentDescription = null
             )
+            // --- AKHIR PERUBAHAN ---
+
             Text(
                 text = "My Music",
                 fontSize = 50.sp,

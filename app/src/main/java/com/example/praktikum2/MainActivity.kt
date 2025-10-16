@@ -7,7 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import com.example.praktikum2.ui.theme.Praktikum2Theme // Import tema yang benar
+import com.example.praktikum2.ui.theme.Praktikum2Theme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,8 +18,8 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    // Memanggil fungsi UI utama kita
-                    TataLetakModern()
+                    // Panggil fungsi kita di sini
+                    TataletakBoxColumnRow()
                 }
             }
         }
