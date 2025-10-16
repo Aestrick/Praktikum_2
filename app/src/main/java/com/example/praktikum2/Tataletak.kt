@@ -20,7 +20,7 @@ fun TataletakBoxColumnRow(modifier: Modifier = Modifier) {
         Box(
             modifier = Modifier
                 .height(110.dp)
-                .fillMaxWidth() // Tambahkan ini agar row bisa menyebar
+                .fillMaxWidth()
                 .background(color = Color.Yellow),
             contentAlignment = Alignment.Center
         ) {
@@ -32,6 +32,14 @@ fun TataletakBoxColumnRow(modifier: Modifier = Modifier) {
                     Text(text = "Col1 Row1 Komponen1")
                     Text(text = "Col1 Row1 Komponen2")
                     Text(text = "Col1 Row1 Komponen3")
+                }
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceEvenly
+                ) {
+                    Text(text = "Col1 Row2 Komponen1")
+                    Text(text = "Col1 Row2 Komponen2")
+                    Text(text = "Col1 Row2 Komponen3")
                 }
             }
         }
