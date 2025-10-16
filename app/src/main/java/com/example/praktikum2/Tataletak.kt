@@ -1,8 +1,10 @@
 package com.example.praktikum2
 
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -23,15 +25,14 @@ fun TataLetakModern(modifier: Modifier = Modifier) {
             .fillMaxSize()
             .padding(16.dp)
     ) {
+        // Card pertama sekarang sudah lengkap dengan 2 baris
         Card(
             modifier = Modifier
                 .fillMaxWidth()
                 .height(120.dp),
-            // Tambahan baru untuk gaya
-            shape = RoundedCornerShape(16.dp), // Membuat sudut membulat
-            elevation = CardDefaults.cardElevation(defaultElevation = 8.dp) // Memberi efek bayangan
+            shape = RoundedCornerShape(16.dp),
+            elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
         ) {
-            // Tambahan baru untuk konten di dalam Card
             Column(
                 modifier = Modifier.fillMaxSize(),
                 verticalArrangement = Arrangement.SpaceEvenly,
@@ -44,6 +45,33 @@ fun TataLetakModern(modifier: Modifier = Modifier) {
                     Text(text = "Baris 1, Kolom 1")
                     Text(text = "Baris 1, Kolom 2")
                 }
+                // Tambahan baru: Baris kedua
+                Row(
+                    modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
+                    horizontalArrangement = Arrangement.SpaceBetween
+                ) {
+                    Text(text = "Baris 2, Kolom 1")
+                    Text(text = "Baris 2, Kolom 2")
+                }
+            }
+        }
+
+        // Tambahan baru: Memberi jarak vertikal
+        Spacer(modifier = Modifier.height(24.dp))
+
+        // Tambahan baru: Card kedua yang lengkap dengan Box di dalamnya
+        Card(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(300.dp),
+            shape = RoundedCornerShape(16.dp),
+            elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
+        ) {
+            Box(
+                modifier = Modifier.fillMaxSize(),
+                contentAlignment = Alignment.Center
+            ) {
+                // Gambar dan Teks akan kita tambahkan di sini pada langkah berikutnya
             }
         }
     }
